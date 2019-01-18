@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="reset.css">
+    <title>Bamazon</title>
+  </head>
+  <body>
+        <nav class="navbar navbar-dark bg-dark"><h1>BAMAZON</h1></nav>
+    
+      
+    </nav>
+
+    <div class="container mt-5">
+      <div class="hide alert alert-danger" id="error" role="alert">
+        Something went wrong, invalid entry or exceeds the amount available in stock. Please enter a valid quantity.
+      </div>
+      <div class="row col-md-12">
+        <table class="table">
+          <thead class="thead-dark">
+            <tr>
+              <th scope="col">Product Id</th>
+              <th scope="col">Product Name</th>
+              <th scope="col">Department</th>
+              <th scope="col">Price(USD)</th>
+              <th scope="col">In Stock</th>
+              <th scope="col">Quantity</th>
+              <th scope="col">Cart</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody class="table-body bg-light tbodypage"><tr>
+          <td class="id">101</td>
+          <td class="product_name">Refridgerator</td>
+          <td class="department_name">APPLIANCES</td>
+          <td class="price">3999.99</td>
+          <td class="stock_quantity">20</td>
+          <td class="quantity"><input class="buy1" id="input"></td>
+          <td><button type="button" class="btn btn-info">Add to Cart</button></td><td>
+        </td></tr><tr>
+          <td class="id">201</td>
+          <td class="product_name">Washer</td>
+          <td class="department_name">APPLIANCES</td>
+          <td class="price">599.99</td>
+          <td class="stock_quantity">10</td>
+          <td class="quantity"><input class="buy1" id="input"></td>
+          <td><button type="button" class="btn btn-info">Add to Cart</button></td><td>
+        </td></tr><tr>
+          <td class="id">301</td>
+          <td class="product_name">Microwave</td>
+          <td class="department_name">APPLIANCES</td>
+          <td class="price">199.99</td>
+          <td class="stock_quantity">15</td>
+          <td class="quantity"><input class="buy1" id="input"></td>
+          <td><button type="button" class="btn btn-info">Add to Cart</button></td><td>
+        </td></tr><tr>
+          <td class="id">401</td>
+          <td class="product_name">Hard Drive</td>
+          <td class="department_name">COMPUTERS</td>
+          <td class="price">105.99</td>
+          <td class="stock_quantity">100</td>
+          <td class="quantity"><input class="buy1" id="input"></td>
+          <td><button type="button" class="btn btn-info">Add to Cart</button></td><td>
+        </td></tr><tr>
+          <td class="id">501</td>
+          <td class="product_name">Keyboard</td>
+          <td class="department_name">COMPUTERS</td>
+          <td class="price">25.99</td>
+          <td class="stock_quantity">50</td>
+          <td class="quantity"><input class="buy1" id="input"></td>
+          <td><button type="button" class="btn btn-info">Add to Cart</button></td><td>
+        </td></tr><tr>
+          <td class="id">601</td>
+          <td class="product_name">Mouse</td>
+          <td class="department_name">COMPUTERS</td>
+          <td class="price">19.99</td>
+          <td class="stock_quantity">50</td>
+          <td class="quantity"><input class="buy1" id="input"></td>
+          <td><button type="button" class="btn btn-info">Add to Cart</button></td><td>
+        </td></tr><tr>
+          <td class="id">701</td>
+          <td class="product_name">iPod</td>
+          <td class="department_name">MUSIC</td>
+          <td class="price">199.99</td>
+          <td class="stock_quantity">20</td>
+          <td class="quantity"><input class="buy1" id="input"></td>
+          <td><button type="button" class="btn btn-info">Add to Cart</button></td><td>
+        </td></tr><tr>
+          <td class="id">801</td>
+          <td class="product_name">SanDisk</td>
+          <td class="department_name">MUSIC</td>
+          <td class="price">80.99</td>
+          <td class="stock_quantity">10</td>
+          <td class="quantity"><input class="buy1" id="input"></td>
+          <td><button type="button" class="btn btn-info">Add to Cart</button></td><td>
+        </td></tr><tr>
+          <td class="id">901</td>
+          <td class="product_name">Headphone</td>
+          <td class="department_name">MUSIC</td>
+          <td class="price">6.99</td>
+          <td class="stock_quantity">20</td>
+          <td class="quantity"><input class="buy1" id="input"></td>
+          <td><button type="button" class="btn btn-info">Add to Cart</button></td><td>
+        </td></tr><tr>
+          <td class="id">902</td>
+          <td class="product_name">TV</td>
+          <td class="department_name">CLEARANCE</td>
+          <td class="price">495.99</td>
+          <td class="stock_quantity">20</td>
+          <td class="quantity"><input class="buy1" id="input"></td>
+          <td><button type="button" class="btn btn-info">Add to Cart</button></td><td>
+        </td></tr></tbody>
+        </table>
+      </div>
+    </div>
+
+    <div id="results-modal" class="modal fade" role="dialog">
+      <div class="modal-dialog">
+        <!-- Modal content -->
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="myInput">Your Cart</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">×</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <table class="table">
+              <thead class="thead-dark">
+                <tr>
+                  <th scope="col">Product Id</th>
+                  <th scope="col">Product Name</th>
+                  <th scope="col">Department</th>
+                  <th scope="col">Cost (USD)</th>
+                  <th scope="col">Quanity</th>
+                </tr>
+              </thead>
+              <tbody class="tbodymodal table-body"></tbody>
+            </table>
+            <div class="totalCart"></div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">
+              Close
+            </button>
+            <button type="button" class="btnPurchase btn btn-primary">Purchase Items</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+ 
+  <script src="app.js"></script>
+
+</body></html>

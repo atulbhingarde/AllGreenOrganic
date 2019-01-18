@@ -1,0 +1,44 @@
+/*------------------------
+    HIDE CLASS
+---------------------------*/
+
+.hide {
+  display: none;
+}
+
+.btn {
+  background-color: rgb(255, 208, 0);
+  border:none;
+}
+.btncart {
+  float: right;
+  margin-left: -20%;
+  font-size: x-large;
+  
+}
+.login {
+  float: right;
+  margin-left: -20%;
+  font-size: x-large;
+  
+}
+
+.btn:hover {
+    background-color: rgb(241, 42, 42);
+}
+
+th{
+  text-align: center;
+}
+
+td{
+  text-align: center;
+}
+
+h1 {
+  color: rgb(247, 160, 30);
+  font-size: 70px
+}
+.navbar-text {
+  color:  rgb(241, 42, 42);
+}
