@@ -3,7 +3,7 @@ let cart = [];
 const renderItems = function(items) {
 
   items.forEach(function(item) {
-    let newProduct = $(` <tr>
+    let newProduct = $(`<tr>
           <td class="id">${item.item_id}</td>
           <td class="product_name">${item.product_name}</td>
           <td class="department_name">${item.department_name}</td>
@@ -37,86 +37,86 @@ const validate = function(item) {
 
 
 //this is the document ready function that says to render all the items in the database, to the table.
-$(document).ready(() => {
-  $.ajax({
-    url: "/api/products",
-    type: "GET"
-  }).then(function(rows) {
-    renderItems(rows);
-  });
-  //this says when the add to cart button is clicked, to then add the data to the array.
-  $(".table-body").on("click", ".btn", function() {
-    $(".alert").addClass("hide");
-    const item = {
-      id: $(this)
-        .parents("tr")
-        .find(".id")
-        .text(),
-      name: $(this)
-        .parents("tr")
-        .find(".product_name")
-        .text(),
-      department: $(this)
-        .parents("tr")
-        .find(".department_name")
-        .text(),
-      price: $(this)
-        .parents("tr")
-        .find(".price")
-        .text(),
-      instock: $(this)
-        .parents("tr")
-        .find(".stock_quantity")
-        .text(),
-      incart: $(this)
-        .parents("tr")
-        .find(".buy1")
-        .val()
-    };
+// $(document).ready(() => {
+//   $.ajax({
+//     url: "/api/products",
+//     type: "GET"
+//   }).then(function(rows) {
+//     renderItems(rows);
+//   });
+//   //this says when the add to cart button is clicked, to then add the data to the array.
+//   $(".table-body").on("click", ".btn", function() {
+//     $(".alert").addClass("hide");
+//     const item = {
+//       id: $(this)
+//         .parents("tr")
+//         .find(".id")
+//         .text(),
+//       name: $(this)
+//         .parents("tr")
+//         .find(".product_name")
+//         .text(),
+//       department: $(this)
+//         .parents("tr")
+//         .find(".department_name")
+//         .text(),
+//       price: $(this)
+//         .parents("tr")
+//         .find(".price")
+//         .text(),
+//       instock: $(this)
+//         .parents("tr")
+//         .find(".stock_quantity")
+//         .text(),
+//       incart: $(this)
+//         .parents("tr")
+//         .find(".buy1")
+//         .val()
+//     };
 
-    validate(item);
+//     validate(item);
    
 
-    console.table(cart);
-  });
+//     console.table(cart);
+//   });
 
-  $(".btncart").on("click", function(event) {
-    event.preventDefault();
-    $(".modal-body").empty();
-console.log("btncart");
-    $('.modal-body').append (`  <table class="table">
-    <thead class="thead-dark">
-      <tr>
-        <th scope="col">Product Id</th>
-        <th scope="col">Product Name</th>
-        <th scope="col">Department</th>
-        <th scope="col">Cost (USD)</th>
-        <th scope="col">Quanity</th>
-      </tr>
-    </thead>
-    <tbody class="tbodymodal table-body"></tbody>
-  </table>
-  <div class="totalCart"></div>`);
-    let totalcost = 0;
-    for (let i = 0; i < cart.length; i++) {
-      totalcost += (parseFloat(cart[i].price)*parseFloat(cart[i].incart.padStart(3,0)))
-      console.log(cart[i]);
-      $(".tbodymodal").append(`<tr>
-    <td class="cartid">${cart[i].id}</td>
-          <td class="cart-product_name">${cart[i].name}</td>
-          <td class="cart-department_name">${cart[i].department}</td>
-          <td class="cart-price">$${cart[i].price}</td>
-          <td class="cat-quantity">${cart[i].incart}</td>
-          </tr>`);
+//   $(".btncart").on("click", function(event) {
+//     event.preventDefault();
+//     $(".modal-body").empty();
+// console.log("btncart");
+//     $('.modal-body').append (`  <table class="table">
+//     <thead class="thead-dark">
+//       <tr>
+//         <th scope="col">Product Id</th>
+//         <th scope="col">Product Name</th>
+//         <th scope="col">Department</th>
+//         <th scope="col">Cost (USD)</th>
+//         <th scope="col">Quanity</th>
+//       </tr>
+//     </thead>
+//     <tbody class="tbodymodal table-body"></tbody>
+//   </table>
+//   <div class="totalCart"></div>`);
+//     let totalcost = 0;
+//     for (let i = 0; i < cart.length; i++) {
+//       totalcost += (parseFloat(cart[i].price)*parseFloat(cart[i].incart.padStart(3,0)))
+//       console.log(cart[i]);
+//       $(".tbodymodal").append(`<tr>
+//     <td class="cartid">${cart[i].id}</td>
+//           <td class="cart-product_name">${cart[i].name}</td>
+//           <td class="cart-department_name">${cart[i].department}</td>
+//           <td class="cart-price">$${cart[i].price}</td>
+//           <td class="cat-quantity">${cart[i].incart}</td>
+//           </tr>`);
           
-    }
-    $(".totalCart").empty();
-    $(".totalCart").append(`<h4>TOTAL PRICE:    $${totalcost}</h4>`)
-    $(".modal").modal("show");
-  });
+//     }
+//     $(".totalCart").empty();
+//     $(".totalCart").append(`<h4>TOTAL PRICE:    $${totalcost}</h4>`)
+//     $(".modal").modal("show");
+//   });
 
   
-});
+// });
 
 $(".btnPurchase").on("click", function (){
   
