@@ -1,0 +1,20 @@
+{
+  "name": "AllGreenOrganic",
+  "version": "1.0.0",
+  "description": "## This app facilitates  ### Customers. \tTo add items from store to the cart. \tChooses when the cart is required. \tChooses the delivery mechanism. ### Farmers. \tTo add items to store. \tWithdraw product, may be seasonally. ### Delivery Mechanisms. \tCustomer pickup the bucket. \tUberDeliver. ### Review Process. ### Manager. \tLow stock \tOption for using the produce that is about to expire. \tDonation and get tax credit to farmer, with farmers consent. \tComposting and provide that to farmers or nursery.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/atulbhingarde/AllGreenOrganic.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/atulbhingarde/AllGreenOrganic/issues"
+  },
+  "homepage": "https://github.com/atulbhingarde/AllGreenOrganic#readme"
+}
