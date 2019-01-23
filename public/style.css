@@ -56,6 +56,6 @@ h1 {
   font-size: x-large
 }
 body {
-  background-image: url("paper.png");
+  background-image: url("./public/pictures/paper.png");
   background-color: #c4c2c2;
  }
