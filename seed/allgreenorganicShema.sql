@@ -1,6 +1,6 @@
 CREATE DATABASE allgreenorganic;
 
-USE bamazon;
+USE allgreenorganic_db;
 
 CREATE TABLE products(
 
