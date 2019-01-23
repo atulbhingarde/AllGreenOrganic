@@ -1,92 +1,98 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
-    <link rel="stylesheet" href="public/style.css">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="./public/style.css">
+
+  <title>AllGreenOrganic</title>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <img src="./public/pictures/logo2.png" id="logo-2"> 
+
+    </button>
+    <div class="collapse navbar-collapse" id="Home">
+      <ul class="navbar-nav mr-auto">
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#" style="color:green;font-size:larger;">Market Locator</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#" style="color:green;font-size:larger;">Weekly's Deals</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#" style="color:green;font-size:larger;">Browse Products</a>
+        </li>
+      </ul>
+      <span class="navbar-text">
+        <a class="nav-link" href="#" style="color:blue;font-size:larger;">
+          Sign up for Savings <img src="./public/pictures/loginsign2.png">
+          <a class="nav-link2" href="#"> <img src="./public/pictures/viewcart.jpg"> </a>
+      </span>
+    </div>
+  </nav>
+  <nav class="navbar navbar-light justify-content-center" style="background-color: rgb(21, 52, 2);color:white">FIND
+    PRODUCTS THAT YOU LIKE<form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-12" style="margin-left:20px;" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" style="margin-left:20px;" type="submit">Search</button>
+    </form>
+    <!-- Navbar content -->
+  </nav>
+  <br>
   
-    <title>AllGreenOrganic</title>
-  </head>
-  <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <img src="./public/pictures/logo2.png">
-    
-      </button>
-      <div class="collapse navbar-collapse" id="Home">
-        <ul class="navbar-nav mr-auto">
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Today's Deals</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Help</a>
-          </li>
-        </ul>
-        <span class="navbar-text">
-          Sign up for Savings  <img src="./public/pictures/loginsign.png">
-        </span>
-      </div>
-    </nav>
-    <nav class="navbar navbar-light" style="background-color: rgb(21, 52, 2);">WHAT YOU WANT TO HAVE TODAY<form class="form-inline my-2 my-lg-0">
-        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-      </form>
-        <!-- Navbar content -->
-      </nav>
-    
+  <br>
+  <div class="container">
+    <div class="card">
       
-      <div class="container">
-          <div class="row">
-            <br>
-            <div class="col-sm-8">  </div><img src="./public/pictures/veggiestable2.png">
-            <div class="col-sm-4"></div><img src="./public/pictures/veggies.jpg">
-          </div>
-    </div>
-    
-    <div id="results-modal" class="modal fade" role="dialog">
-      <div class="modal-dialog">
-        <!-- Modal content -->
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="myInput">Your Cart</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">×</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            <table class="table">
-              <thead class="thead-dark">
-                <tr>
-                  <th scope="col">Product Id</th>
-                  <th scope="col">Product Name</th>
-                  <th scope="col">Department</th>
-                  <th scope="col">Cost (USD)</th>
-                  <th scope="col">Quanity</th>
-                </tr>
-              </thead>
-              <tbody class="tbodymodal table-body"></tbody>
-            </table>
-            <div class="totalCart"></div>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">
-              Close
-            </button>
-            <button type="button" class="btnPurchase btn btn-primary">Purchase Items</button>
-          </div>
-        </div>
+      <div class="card-body">
+      
+        <p class="card-text">
+          <img src="./public/pictures/brocco1.jpg" class="card-img-top" alt="..." id="true-brocco">
+          Explore our products
+        </p>
+        <a href="./products.html"><img id="browse"src="./public/pictures/browse.png"></a>
+        
       </div>
     </div>
+    <div class="row">
+      <div class="col-sm"> <a href="./products.html"><img id="largepic"src="./public/pictures/delivery.png"></a>
+        <br>
+        Shopping<br>
+        Find a store
+      </div>
+      <div class="col-sm"> <a href="./products.html"><img id="largepic" src="./public/pictures/citrus.png"></a>
+        One of three columns
+      </div>
+      <div class="col-sm"> <a href="./products.html"><img id="largepic" src="./public/pictures/taco2.png"></a>
+        <br>
+        Company <br>
+        Mission & Values
+      </div>
+    </div>
+  </div>
   
+  
+   
+  </div>
 
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+
+  <!--script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script-->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
     crossorigin="anonymous"></script>
-    <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
-  <script src="./public/app.js"></script>
-</body></html>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+    crossorigin="anonymous"></script>
+  <script src="app.js"></script>
+</body>
+
+</html>
