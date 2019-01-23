@@ -4,7 +4,7 @@ var fs = require("fs");
 var path = require("path");
 var Sequelize = require("sequelize");
 var basename = path.basename(module.filename);
-var env = process.env.NODE_ENV || "development";
+var env = process.env.NODE_ENV || "development";  // this needs adjustment for final production environment.
 var config = require(__dirname + "/../config/config.json")[env]; // this needs to be adjusted to proper locations/configuratiosn adn MYSQL password etc.
 var db = {};
 
