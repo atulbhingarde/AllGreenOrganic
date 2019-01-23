@@ -55,11 +55,6 @@ h1 {
   color:  rgb(241, 42, 42)
 }
 body {
-<<<<<<< HEAD
-  background-image: url("../public/pictures/paper.png");
-  background-color: #c4c2c2;
- }
-=======
   background-image: url("pictures/VEG.png");
   background-color: #c4c2c2
  }
@@ -118,4 +113,3 @@ body {
 #logo-2 {
   max-width: 100%;
 }
->>>>>>> development
