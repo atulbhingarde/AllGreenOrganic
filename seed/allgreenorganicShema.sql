@@ -2,9 +2,9 @@ CREATE DATABASE allgreenorganic;
 
 USE allgreenorganic;
 
-CREATE TABLE contacts(
+CREATE TABLE suppliers(
 item_id INTEGER AUTO_INCREMENT NOT NULL,
-suppliers VARCHAR(100) NOT NULL,
+farmers_name VARCHAR(100) NOT NULL,
 farmers_address VARCHAR(100) NOT NULL,
 phone_number VARCHAR(20) NOT NULL,
 hours_operation VARCHAR(100) NOT NULL,
