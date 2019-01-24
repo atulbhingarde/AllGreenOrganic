@@ -6,9 +6,7 @@ module.exports = function(app) {
   // GET route for retrieving all suppliers
   app.get('/api/suppliers', function(req, res) {
 
-    // Here we add an 'include' property to our options in our findAll query
-    // We set the value to an array of the models we want to include in a left outer join
-    // In this case, just db.Article
+
     db.suppliers.findAll({
       }).then(function(farmers) {
       res.json(farmers);
@@ -19,7 +17,18 @@ module.exports = function(app) {
     });
   });
  
+  // GET route for retrieving all customers
+  app.get('/api/customers', function(req, res) {
 
+    db.customers.findAll({
+      }).then(function(customers) {
+      res.json(customers);
+      console.log(customers);
+
+    }).catch(function(error) {
+      res.json({ error: error });
+    });
+  });
 
 
   // below is sample 
