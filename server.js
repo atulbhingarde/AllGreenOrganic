@@ -29,8 +29,9 @@ app.use(express.static(path.join(__dirname, './public')));
 
 // Routes
 // =============================================================
-require('./routes/apiRoute_custMark_add.js')(app);
+require('./routes/apiRoute_supplier.js')(app);
 require('./routes/apiRoute_productList.js')(app);
+require('./routes/html-routes.js')(app);
 
 // Syncing our sequelize models and then starting our Express app
 // =============================================================
