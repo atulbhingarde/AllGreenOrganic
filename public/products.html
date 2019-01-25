@@ -1,61 +1,92 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
-  
-    <title>AllGreenOrganic</title>
-  </head>
-  <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <img src="pictures/logo2.png">
-    
-      </button>
-      <div class="collapse navbar-collapse" id="Home">
-        <ul class="navbar-nav mr-auto">
-          </li>
-          <li class="nav-item">
-              <a class="nav-link" href="#"style="color:green;font-size:larger;">Home</a>
-            </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#"style="color:green;font-size:larger;">Weekly's Deals</a>
-          </li>
-          
-        </ul>
-        <span class="navbar-text">
-            <a class="nav-link" href="#"style="color:blue;font-size:larger;">
-          Sign up for Savings  <img src="./loginsign.png">
-        </span>
-      </div>
-    </nav>
-    <nav class="navbar navbar-light justify-content-center" style="background-color: rgb(21, 52, 2);color:white">FIND PRODUCTS THAT YOU LIKE
-      <form class="form-inline my-2 my-lg-0">
-        <input class="form-control mr-sm-12" style="margin-left:20px;" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success my-2 my-sm-0" style="margin-left:20px;" type="submit">Search</button>
-      </form>
-        <!-- Navbar content -->
-      </nav>
-    
-      
-      <div class="container">
-          <div class="row">
-            <br>
-              <div class="col-sm-4"></div><img src="./veggies.jpg">
-          </div>
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+
+  <title>AllGreenProducts</title>
+</head>
+
+<body>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <div class="topnav" id="myTopnav">
+      <img src="pictures/logo2.png" id="logo-2">
+      <a href="#home" class="active">Home</a>
+      <a href="#news">News</a>
+      <a href="#contact">Contact</a>
+      <a href="#about">About</a>
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+      <a class="nav-link" href="#" style="color:blue;font-size:larger;">
+        <img src="pictures/loginsign2.png">
+        <a class="nav-link2" href="#"> <img src="pictures/viewcart.jpg"> </a>
+      </a>
     </div>
     
-    
-  
 
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  <!-- <nav class="navbar navbar-light justify-content-center" style="background-color: rgb(21, 52, 2);color:white">FIND
+    PRODUCTS THAT YOU LOVE<form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-12" style="margin-left:20px;" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" style="margin-left:20px;" type="submit">Search</button>
+    </form>  -->
+    
+    <!-- Navbar content -->
+  </nav>
+  <div class="container mt-5">
+      <div class="hide alert alert-danger" id="error" role="alert">
+        Something went wrong, invalid entry or exceeds the amount available in stock. Please enter a valid quantity.
+      </div>
+      <div class="row col-md-12">
+        <table class="table">
+          <thead class="thead-dark">
+            <tr>
+              <th scope="col">Product Id</th>
+              <th scope="col">Product Name</th>
+              <th scope="col">Department</th>
+              <th scope="col">Price(USD)</th>
+              <th scope="col">In Stock</th>
+              <th scope="col">Quantity</th>
+              <th scope="col">Cart</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody class="table-body bg-light tbodypage">
+          
+        </tbody>
+        </table>
+      </div>
+    </div>
+
+  
+  
+  <script>
+      function myFunction() {
+      var x = document.getElementById("myTopnav");
+      if (x.className === "topnav") {
+      x.className += " responsive";
+      } else {
+      x.className = "topnav";
+      }
+      }
+      </script>
+
+  <!--script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script-->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
     crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
-    <script src="app.js"></script>
-  </body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+    crossorigin="anonymous"></script>
+  <script src="app.js"></script>
+</body>
+
 </html>
