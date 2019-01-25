@@ -18,6 +18,18 @@ const renderCustomers = function(){
 renderCustomers();
 
 
+
+const renderProducts = function(){
+  $.get('/api/products').then(function(listProducts){
+    console.log('List of Products');
+  console.log(listProducts);
+})
+}
+renderProducts();
+
+
+
+
 //this is the document ready function that says to render all the items in the database, to the table.
 // $(document).ready(() => {
 //   $.ajax({

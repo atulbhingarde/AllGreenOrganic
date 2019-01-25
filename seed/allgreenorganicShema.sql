@@ -24,6 +24,16 @@ updatedAt DATE,
 PRIMARY KEY(id)
 );
 
+CREATE TABLE products(
+id INTEGER AUTO_INCREMENT NOT NULL,
+product_name VARCHAR(100) NOT NULL,
+market_id INTEGER NOT NULL,
+price DECIMAL(4,2) NOT NULL,
+unit VARCHAR(20) NOT NULL,
+createdAt DATE,
+updatedAt DATE,
+PRIMARY KEY(id)
+);
 
 
 
