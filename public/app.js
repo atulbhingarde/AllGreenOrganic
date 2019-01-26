@@ -12,6 +12,7 @@ renderMarkets();
 
 
 
+
 const renderCustomers = function()
  {
   $.get('/api/customers').then(function(listCustomers)
@@ -20,18 +21,34 @@ const renderCustomers = function()
     MyDebug && console.log(listCustomers);
    });
  };
+
 renderCustomers();
 
 
 
-const renderProducts = function()
- {
-  $.get('/api/products').then(function(listProducts)
-   {
-    MyDebug && console.log('List of Products');
-    MyDebug && console.log(listProducts);
-   });
- };
+
+const renderProducts = function(){
+  $.get('/api/products').then(function(listProducts){
+      MyDebug && console.log('List of Products');
+      MyDebug && console.log(listProducts);
+
+
+    $(document).ready(function() {
+      $('#reNameMe2').DataTable( {
+
+        data: listProducts,    
+          columns: [
+              { data: "market_id" },
+              { data: "product_name" },
+              { data: "price" },
+              { unit: "unit"}
+          ]
+      } );
+    });
+
+})
+}
+
 renderProducts();
 
 
