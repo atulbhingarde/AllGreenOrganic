@@ -1,3 +1,4 @@
+const MyDebug = false;
 const path = require("path");
 
 // if we keep index.html in public folder we redirect to the subdirectory
@@ -11,4 +12,4 @@ module.exports = function(app) {
   app.get('*', function(req, res) {
     res.sendFile(path.join(__dirname, '../public/index.html'));
   });
-}
+};
