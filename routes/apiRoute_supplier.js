@@ -1,5 +1,4 @@
-
-MyDebug = false;
+const MyDebug = false;
 // Requiring our models
 const db = require('../models');
 
