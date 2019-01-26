@@ -1,30 +1,37 @@
 
-const renderMarkets = function(){
-  $.get('/api/suppliers').then(function(listMarkets){
-    console.log('List of markets');
-  console.log(listMarkets);
-})
-}
+const MyDebug = false;
+const renderMarkets = function()
+ {
+  $.get('/api/suppliers').then(function(listMarkets)
+  {
+    MyDebug && console.log('List of markets');
+    MyDebug && console.log(listMarkets);
+  });
+ };
 renderMarkets();
 
 
 
-const renderCustomers = function(){
-  $.get('/api/customers').then(function(listCustomers){
-    console.log('List of customers');
-  console.log(listCustomers);
-})
-}
+const renderCustomers = function()
+ {
+  $.get('/api/customers').then(function(listCustomers)
+   {
+    MyDebug && console.log('List of customers');
+    MyDebug && console.log(listCustomers);
+   });
+ };
 renderCustomers();
 
 
 
-const renderProducts = function(){
-  $.get('/api/products').then(function(listProducts){
-    console.log('List of Products');
-  console.log(listProducts);
-})
-}
+const renderProducts = function()
+ {
+  $.get('/api/products').then(function(listProducts)
+   {
+    MyDebug && console.log('List of Products');
+    MyDebug && console.log(listProducts);
+   });
+ };
 renderProducts();
 
 
