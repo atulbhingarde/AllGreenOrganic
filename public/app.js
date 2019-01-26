@@ -12,7 +12,8 @@ renderMarkets();
 const renderCustomers = function(){
   $.get('/api/customers').then(function(listCustomers){
     console.log('List of customers');
-  console.log(listCustomers);
+    console.log(listCustomers);
+    
 })
 }
 renderCustomers();
@@ -21,8 +22,23 @@ renderCustomers();
 
 const renderProducts = function(){
   $.get('/api/products').then(function(listProducts){
-    console.log('List of Products');
-  console.log(listProducts);
+      console.log('List of Products');
+      console.log(listProducts);
+
+
+    $(document).ready(function() {
+      $('#reNameMe2').DataTable( {
+
+        data: listProducts,    
+          columns: [
+              { data: "market_id" },
+              { data: "product_name" },
+              { data: "price" },
+              { unit: "unit"}
+          ]
+      } );
+    });
+
 })
 }
 renderProducts();
