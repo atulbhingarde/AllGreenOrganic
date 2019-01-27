@@ -118,7 +118,8 @@ body {
 
 #logo-2 {
   max-width: 100%;
-  float:  left
+  float:  left;
+  
 }
 #browse {
   float:  right;
@@ -230,3 +231,10 @@ tr:nth-child(even){background-color: #f2f2f2}
 #addcart {
   font-size: small
 }
+#storelist {
+  margin-left:50%
+}
+#locationmap {
+  margin-right:auto;
+  width: 15%
+  }
