@@ -20,30 +20,47 @@ renderCustomers();
 
 
 
-const renderProducts = function(){
-  $.get('/api/products').then(function(listProducts){
-      console.log('List of Products');
-      console.log(listProducts);
 
+$('.reNameMe').html('this DIV sample append');
 
-    $(document).ready(function() {
-      $('#reNameMe2').DataTable( {
+let onHand;
 
-        data: listProducts,    
+const renderProducts = function(listProducts) {
+    
+      // console.log('List of Products');
+      // console.log(listProducts);
+      $('#reNameMe2').html('this is some sample');
+      onHand = listProducts; 
+      // console.log(onHand);
+      // console.log('do it again table');
+
+      $(document).ready(function() {
+        $('#inStock').DataTable( {
+        
+        data: onHand,    
           columns: [
               { data: "market_id" },
               { data: "product_name" },
               { data: "price" },
-              { unit: "unit"}
+              { data: "unit" }
           ]
-      } );
+      });
+      // console.log('after the fact');
+      // console.log(onHand);
+      // console.log(listProducts);
     });
 
-})
+
+   // console.log('do it again table2');
 }
-renderProducts();
 
+const retreiveProducts = function() {
+  $.get('/api/products').then(renderProducts);
+  }
 
+retreiveProducts();
+
+$('#reNameMe2').html('this is some sample');
 
 
 //this is the document ready function that says to render all the items in the database, to the table.

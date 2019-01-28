@@ -1,6 +1,23 @@
 /*------------------------
     HIDE CLASS
 ---------------------------*/
+.dataTables_filter {
+  margin-right: 10%;
+  float: right;
+}
+.dataTables_paginate {
+  margin-right: 10%;
+  float: right;
+}
+
+.paginate_button {
+  padding: 10px;
+  border:solid;
+  border-color: black;
+  
+}
+
+
 
 .hide {
   display: none;
@@ -37,7 +54,7 @@ td{
 
 h1 {
   color: rgb(247, 160, 30);
-  font-size: 70px
+  font-size: 70px;
 }
 
 #largepic {
@@ -47,16 +64,16 @@ h1 {
   display:block;
   margin-left: auto;
   margin-right: auto;
-  width: 100%
+  width: 100%;
 }
 #navbar-text {
   color: green;
   font-size: x-large;
-  color:  rgb(241, 42, 42)
+  color:  rgb(241, 42, 42);
 }
 body {
-  background-color: rgb(225, 223, 223)
- }
+  background-color: rgb(225, 223, 223);
+}
  
  @media screen and (max-width: 600px) {
   .navbar navbar-expand-lg navbar-light bg-light.responsive {position: relative;}
@@ -76,7 +93,7 @@ body {
     position: absolute;
     top: 0;
     transform: translate(0, 50%);
-    background-image: url("/public/pictures/vegetable3.png")
+    background-image: url("/public/pictures/vegetable3.png");
   }
   #navbarCollapse {
     padding-top: 120px;
@@ -84,14 +101,14 @@ body {
 }
 #col-sm {
   color: blue;
-  font-size: large
+  font-size: large;
 }
 #container-fluid {
-  width:100%
+  width:100%;
 }
 #col {
   color: white;
-  font-size: x-large
+  font-size: x-large;
 }
 .brocco {
   position: absolute;
@@ -102,23 +119,23 @@ body {
 }
 .card-text {
   font-size: 250%;
-  font-weight: bolder
+  font-weight: bolder;
 }
 .card-text3 {
   font-size: 100%;
-  font-weight: bolder
+  font-weight: bolder;
 }
 
 #true-brocco{
   max-width: 60%;
 }
 #viewcart {
-  max-width: 20%
+  max-width: 20%;
 }
 
 #logo-2 {
   max-width: 100%;
-  float:  left
+  float:  left;
 }
 #browse {
   float:  right;
@@ -126,21 +143,21 @@ body {
 .card-text2 {
   font-size: 185%;
   color:  green;
-  font-style: italic
+  font-style: italic;
 }
 .card-header {
   font-size: 200%;
   color:  green;
-  font-style: italic
+  font-style: italic;
 }
 .btn{
-  background-color: rgb(241, 42, 42)
+  background-color: rgb(241, 42, 42);
 }
 .btn:hover {
-  background-color: #8e3e3e
+  background-color: #8e3e3e;
 }
 .btn-outline-success {
-  color:  white
+  color:  white;
 }
 /* Add a black background color to the top navigation */
 .topnav {
@@ -156,7 +173,7 @@ body {
   text-align: center;
   padding: 20px 12px;
   text-decoration: none;
-  font-size: 20px
+  font-size: 20px;
 }
 
 /* Change the color of links on hover */
@@ -199,7 +216,7 @@ body {
   }
 }
 .nav-link {
-  margin-left: 180px
+  margin-left: 180px;
 }
   #imageproduct {
     max-width: 25%;
@@ -209,24 +226,24 @@ body {
   border-collapse: collapse;
   border-spacing: 0;
   width: 100%;
-  border: 1px solid #ddd
+  border: 1px solid #ddd;
 }
 
 .th, td {
-  text-align: left;
+  text-align: center;
   padding: 8px;
   
 }
 
 
-tr:nth-child(even){background-color: #f2f2f2}
+tr:nth-child(even){background-color: #f2f2f2};
 
 .row-col-md-12 {
   border-collapse: collapse;
   border-spacing: 0;
   width: 100%;
-  border: 1px solid #ddd
+  border: 1px solid #ddd;
 }
 #addcart {
-  font-size: small
+  font-size: small;
 }
