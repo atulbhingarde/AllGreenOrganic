@@ -28,42 +28,42 @@ INSERT INTO customers(customer_name,customer_address,phone_number)
 VALUES("Dan Doe","444 Augusta Drive, Canton, GA 30115","(666) 123-4567");
 
 INSERT INTO customers(customer_name,customer_address,phone_number)
-VALUES("Atul Doe","8181 WindStream Ave, Alpharetta, GA 30310","(999) 765-1234");
+VALUES("Atul Doe","8181 WindStream Ave, Milton, GA 30004","(999) 765-1234");
 
 
 
-INSERT INTO products(product_name,market_id,price,unit)
-VALUES("green lettuce",3,1.5,"bunch");
+INSERT INTO products(prd_image,product_name,market_id,price,unit)
+VALUES("public/pictures/products/lettuce.jpg","green lettuce",3,1.5,"bunch");
 
-INSERT INTO products(product_name,market_id,price,unit)
-VALUES("kale",2,1.75,"bunch");
+INSERT INTO products(prd_image,product_name,market_id,price,unit)
+VALUES("public/pictures/kale.jpg","kale",2,1.75,"bunch");
 
-INSERT INTO products(product_name,market_id,price,unit)
-VALUES("broccoli",5,1.25,"bunch");
+INSERT INTO products(prd_image,product_name,market_id,price,unit)
+VALUES("public/pictures/products/broccoli.jpg","broccoli",5,1.25,"bunch");
 
-INSERT INTO products(product_name,market_id,price,unit)
-VALUES("pumpkin",3,9.99,"each");
+INSERT INTO products(prd_image,product_name,market_id,price,unit)
+VALUES("public/pictures/products/pumpkin.jpg","pumpkin",3,9.99,"each");
 
-INSERT INTO products(product_name,market_id,price,unit)
-VALUES("cucumber",1,8.00,"each");
+INSERT INTO products(prd_image,product_name,market_id,price,unit)
+VALUES("public/pictures/products/cucumber.jpg","cucumber",1,8.00,"each");
 
-INSERT INTO products(product_name,market_id,price,unit)
-VALUES("orange",2,5.99,"each");
+INSERT INTO products(prd_image,product_name,market_id,price,unit)
+VALUES("public/pictures/products/orange.jpg","orange",2,5.99,"each");
 
-INSERT INTO products(product_name,market_id,price,unit)
-VALUES("celery",4,9.99,"each");
+INSERT INTO products(prd_image,product_name,market_id,price,unit)
+VALUES("public/pictures/products/celery.jpg","celery",4,9.99,"each");
 
-INSERT INTO products(product_name,market_id,price,unit)
-VALUES("eggs",3,4.00,"dozen");
+INSERT INTO products(prd_image,product_name,market_id,price,unit)
+VALUES("public/pictures/products/eggs.jpg","eggs",3,4.00,"dozen");
 
-INSERT INTO products(product_name,market_id,price,unit)
-VALUES("cabbage",5,3.00,"each");
+INSERT INTO products(prd_image,product_name,market_id,price,unit)
+VALUES("public/pictures/products/cabbage.jpg","cabbage",5,3.00,"each");
 
-INSERT INTO products(product_name,market_id,price,unit)
-VALUES("strawberry",1,3.50,"pint");
+INSERT INTO products(prd_image,product_name,market_id,price,unit)
+VALUES("public/pictures/products/strawberry.jpg","strawberry",1,3.50,"pint");
 
-INSERT INTO products(product_name,market_id,price,unit)
-VALUES("blueberry",4,5.00,"pint");
+INSERT INTO products(image,product_name,market_id,price,unit)
+VALUES("public/pictures/products/blueberry.jpg","blueberry",4,5.00,"pint");
 
 
 
