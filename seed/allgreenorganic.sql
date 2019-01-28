@@ -33,37 +33,37 @@ VALUES("Atul Doe","8181 WindStream Ave, Alpharetta, GA 30310","(999) 765-1234");
 
 
 INSERT INTO products(product_name,market_id,price,unit)
-VALUES("leaf lettuce",3,1.5,"bunch");
+VALUES("green lettuce",3,1.5,"bunch");
 
 INSERT INTO products(product_name,market_id,price,unit)
-VALUES("leaf lettuce",2,1.75,"bunch");
+VALUES("kale",2,1.75,"bunch");
 
 INSERT INTO products(product_name,market_id,price,unit)
-VALUES("leaf lettuce",5,1.25,"bunch");
+VALUES("broccoli",5,1.25,"bunch");
 
 INSERT INTO products(product_name,market_id,price,unit)
 VALUES("pumpkin",3,9.99,"each");
 
 INSERT INTO products(product_name,market_id,price,unit)
-VALUES("pumpkin",1,8.00,"each");
+VALUES("cucumber",1,8.00,"each");
 
 INSERT INTO products(product_name,market_id,price,unit)
-VALUES("pumpkin",2,5.99,"each");
+VALUES("orange",2,5.99,"each");
 
 INSERT INTO products(product_name,market_id,price,unit)
-VALUES("pumpkin",4,9.99,"each");
+VALUES("celery",4,9.99,"each");
 
 INSERT INTO products(product_name,market_id,price,unit)
 VALUES("eggs",3,4.00,"dozen");
 
 INSERT INTO products(product_name,market_id,price,unit)
-VALUES("eggs",5,3.00,"dozen");
+VALUES("cabbage",5,3.00,"each");
 
 INSERT INTO products(product_name,market_id,price,unit)
-VALUES("eggs",1,3.50,"dozen");
+VALUES("strawberry",1,3.50,"pint");
 
 INSERT INTO products(product_name,market_id,price,unit)
-VALUES("eggs",4,5.00,"dozen");
+VALUES("blueberry",4,5.00,"pint");
 
 
 
