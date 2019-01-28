@@ -10,8 +10,8 @@ var db = {};
 // console.log("here " + env);
 // console.log("here again "+process.env.JAWS_DB);
 // console.log("this is it " + config.use_env_variable);
-if (config.use_env_variable){
-// if ( config.use_env_variable !== null ) { (Anuj suggested cannot be null)
+//if (config.use_env_variable){
+if ( ( config.use_env_variable !== null ) && ( env !== "development" ) ) {
   var sequelize = new Sequelize(process.env[config.use_env_variable]);
   // console.log('This environment is ' + env + " " + process.env[config.use_env_variable]);
 } else {
