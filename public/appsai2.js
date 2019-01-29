@@ -20,21 +20,29 @@ const clearInput = function() {
   $("[id =input]").val("");
 };
 
-const validate = function(item) {
-//   if (item.incart.padStart(4,0) > item.instock.padStart(4,0)) {
-    if ( item.incart.padStart(4,0) >  0 ) {
-    console.log(item.incart);
-    $(".alert").removeClass("hide");
-    clearInput();
-  } else if (isNaN(item.incart)){
-    $(".alert").removeClass("hide");
-    clearInput();
-  }
-  else {
-    cart.push(item);
-    clearInput();
+const saveToLocalData = item => {
+  const productInfo = JSON.stringify(item);
+  localStorage.setItem('cart', productInfo);
+  return;
+};
+
+const validate = item => {
+  const localData = JSON.parse(localStorage.getItem('cart'));
+  if (!localData|| localData.length === 0) { 
+    const productInfo = JSON.stringify([item]);
+    localStorage.setItem('cart', productInfo);
+  } else if (localData.length >= 1) {
+    for (let i = 0; i < localData.length; i++) {
+      if (localData[i].id === item.id) {
+        localData[i] = item;
+        return saveToLocalData(localData);
+      }
+    }
+    localData.push(item);
+    return saveToLocalData(localData);
   }
 };
+
 
 
 
@@ -72,7 +80,7 @@ $(document).ready(() => {
     //     .text(),
         unit: $(this)
         .parents("tr")
-        .find(".unit")
+        .find(".stock_quantity")
         .text(),
       incart: $(this)
         .parents("tr")

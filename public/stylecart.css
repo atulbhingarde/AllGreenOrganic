@@ -18,28 +18,22 @@
     background: #FFFFFF;
     box-shadow: 1px 2px 3px 0px rgba(0,0,0,0.10);
     border-radius: 6px;
-   
     display: flex;
     flex-direction: column;
   }
+
   .title {
     height: 60px;
     border-bottom: 1px solid #E1E8EE;
     padding: 20px 30px;
     color: #5E6977;
     font-size: 18px;
-    font-weight: 400;
+    font-weight: 400
   }
-   
   .item {
     padding: 20px 30px;
     height: 120px;
-    display: flex;
-  }
-   
-  .item:nth-child(3) {
-    border-top:  1px solid #E1E8EE;
-    border-bottom:  1px solid #E1E8EE;
+    display: flex
   }
   .buttons {
     position: relative;
@@ -249,4 +243,8 @@
 .title {
   color:  black;
   font-size:  150%
+}
+#browse {
+  background-color: red;
+  border-color: red
 }
