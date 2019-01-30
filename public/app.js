@@ -27,29 +27,29 @@ renderCustomers();
 
 
 
-const renderProducts = function(){
-  $.get('/api/products').then(function(listProducts){
-      MyDebug && console.log('List of Products');
-      MyDebug && console.log(listProducts);
+// const renderProducts = function(){
+//   $.get('/api/products').then(function(listProducts){
+//       MyDebug && console.log('List of Products');
+//       MyDebug && console.log(listProducts);
 
 
-    $(document).ready(function() {
-      $('#reNameMe2').DataTable( {
+//     $(document).ready(function() {
+//       $('#reNameMe2').DataTable( {
 
-        data: listProducts,    
-          columns: [
-              { data: "market_id" },
-              { data: "product_name" },
-              { data: "price" },
-              { unit: "unit"}
-          ]
-      } );
-    });
+//         data: listProducts,    
+//           columns: [
+//               { data: "market_id" },
+//               { data: "product_name" },
+//               { data: "price" },
+//               { unit: "unit"}
+//           ]
+//       } );
+//     });
 
-})
-}
+// })
+// }
 
-renderProducts();
+// renderProducts();
 
 
 

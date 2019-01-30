@@ -5,11 +5,16 @@
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
+  <meta name="google-signin-client_id" content="79799338739-rsp810mea0eluoacovtdjk9kdhaqd9k7.apps.googleusercontent.com">
+		
   <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
-    crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
   <link rel="stylesheet" href="style.css">
+
+  <script src="https://apis.google.com/js/api.js"></script>
+  <script src="https://apis.google.com/js/client:platform.js?onload=renderButton" async defer></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
 
   <title>AllGreenOrganic</title>
 </head>
@@ -48,7 +53,13 @@
         <h4>SIGN UP USING YOUR GOOGLE ID</h4>
         <p>No extra passwords to remember!</p>
         <br>
-        <div class="g-signin2" data-onsuccess="onSignIn"><image id = "googlepic" src="pictures/googlesignin.png"></div>
+
+        <div id="bloc_page">
+          <div id="gSignIn"></div>		
+            <div class="userContent"></div> 
+          </div> <!-- div bloc_page -->  
+
+ <div class="g-signin2" ></div>
         <br>
         <br>
           <h4>Get on our list and subscribe to our newsletters. </h4>
@@ -65,9 +76,67 @@
         </div>
     </div>  
   </div>
-  
-  
-  
+  <style>
+    .g-signin2 {
+          justify-content: center;
+          display: flex;
+    }
+    .profile{
+      border: 3px solid #B7B7B7;
+      padding: 10px;
+      margin-top: 10px;
+      width: 350px;
+      background-color: #F7F7F7;
+      height: 160px;
+    }
+    .profile p{margin: 0px 0px 10px 0px;}
+    .head{margin-bottom: 10px;}
+    .head a{float: right;}
+    .profile img{width: 100px;float: left;margin: 0px 10px 10px 0px;}
+    .proDetails{float: left;}		
+  </style>
+
+ <script>
+  function onSuccess(googleUser) {
+    var profile = googleUser.getBasicProfile();
+    gapi.client.load('plus', 'v1', function () {
+      var request = gapi.client.plus.people.get({
+        'userId': 'me'
+      });
+      //Display the user details
+      request.execute(function (resp) {
+      
+        var profileHTML = '<div class="profile"><div class="head">Welcome '+resp.name.givenName+'! <a href="javascript:void(0);" onclick="signOut();">Sign out</a></div>';
+        profileHTML += '<img src="'+resp.image.url+'"/><div class="proDetails"><p>'+resp.displayName+'</p><p>'+resp.emails[0].value+'</p><p>'+resp.gender+'</p><p>'+resp.id+'</p><p><a href="'+resp.url+'">View Google+ Profile</a></p></div></div>';
+        $('.userContent').html(profileHTML);
+        $('#gSignIn').slideUp('slow');
+      });
+    });
+  }
+  function onFailure(error) {
+    alert(error);
+  }
+  function renderButton() {
+    gapi.signin2.render('gSignIn', {
+      'scope': 'profile email',
+      'width': 240,
+      'height': 50,
+      'longtitle': true,
+      'theme': 'dark',
+      'onsuccess': onSuccess,
+      'onfailure': onFailure
+    });
+  }
+  function signOut() {
+    var auth2 = gapi.auth2.getAuthInstance();
+    auth2.signOut().then(function () {
+      $('.userContent').html('');
+      $('#gSignIn').slideDown('slow');
+    });
+  }
+</script>
+       
+
   
   <script>
       function myFunction() {
@@ -78,31 +147,28 @@
       x.className = "topnav";
       }
       }
-      function onSignIn(googleUser) {
-    var profile = googleUser.getBasicProfile();
-    console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
-    console.log('Name: ' + profile.getName());
-    console.log('Image URL: ' + profile.getImageUrl());
-    console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
-      }
-      <a href="#" onclick="signOut();">Sign out</a>
+  //     function onSignIn(googleUser) {
+  //   var profile = googleUser.getBasicProfile();
+  //   console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
+  //   console.log('Name: ' + profile.getName());
+  //   console.log('Image URL: ' + profile.getImageUrl());
+  //   console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
+  //     }
+  //     <a href="#" onclick="signOut();">Sign out</a>
 
-    function signOut() {
-    var auth2 = gapi.auth2.getAuthInstance();
-    auth2.signOut().then(function () {
-      console.log('User signed out.');
-    });
-  }
+  //   function signOut() {
+  //   var auth2 = gapi.auth2.getAuthInstance();
+  //   auth2.signOut().then(function () {
+  //     console.log('User signed out.');
+  //   });
+  // }
 
   </script>
 
-  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-    crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
-    crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
-    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
   <script src="app.js"></script>
 </body>
 
