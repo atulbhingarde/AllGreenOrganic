@@ -1,3 +1,4 @@
+const MyDebug = false;
 // Requiring our models
 const db = require('../models');
 
@@ -10,7 +11,7 @@ module.exports = function(app) {
     db.suppliers.findAll({
       }).then(function(farmers) {
       res.json(farmers);
-      console.log(farmers);
+      MyDebug && console.log(farmers);
 
     }).catch(function(error) {
       res.json({ error: error });
@@ -23,7 +24,7 @@ module.exports = function(app) {
     db.customers.findAll({
       }).then(function(customers) {
       res.json(customers);
-      console.log(customers);
+      MyDebug && console.log(customers);
 
     }).catch(function(error) {
       res.json({ error: error });
@@ -52,4 +53,4 @@ module.exports = function(app) {
   //     res.json({ error: error });
   //   });
   // });
-}
+};

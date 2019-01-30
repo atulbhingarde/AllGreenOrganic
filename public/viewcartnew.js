@@ -5,7 +5,8 @@ $(document).ready(function() {
       const customerCart = JSON.parse(localStorage.getItem(`cart`));
       let total = 0;
       customerCart.forEach((item, itemIndex) => {
-        total += parseFloat(item.price) * parseFloat(item.incart);
+        total += parseFloat(item.price).toFixed(2) * parseFloat(item.incart).toFixed(2);
+        //total += parseFloat(item.price) * parseFloat(item.incart);
         $(`.shopping-cart`).append(`<div class="item">
       <div class="buttons">
       <img id="delete-btn" src="./pictures/x-mark.png" alt="delete" data-index=${itemIndex}>

@@ -136,9 +136,9 @@
     outline:0;
   }
   .total-price {
-    width: 83px;
+    width: 120px;
     padding-top: 27px;
-    text-align: center;
+    text-align: left;
     font-size: 16px;
     color: #43484D;
     font-weight: 300;
