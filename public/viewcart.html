@@ -21,130 +21,45 @@
         <img src="pictures/logo2.png" id="logo-2">
         <a href="index.html" class="active">Home</a>
       <!--<a href="#news">News</a>-->
-      <a href="#contact">Contact</a>
+        <!--<a href="#news">News</a>-->
+        <a href="contactus.html">Contact</a>
         <a href="locations.html">Search Locations</a>
         <a href="javascript:void(0);" class="icon" onclick="myFunction()">
             <i class="fa fa-bars"></i>
-            <a class="nav-link" href="#" style="color:blue;font-size:larger;">
+            <a class="nav-link" href="account.html" style="color:blue;font-size:larger;">
                 <img src="pictures/loginsign2.png">
                 <!----<a class="nav-link2" href="#"> <img src="pictures/viewcart.jpg"> </a>-->
             </a>
     </div>
     <!-------->
+    <div class="container">
+        <div class="card text-center">
+            <div class="card-body">
+                <p class="card-text">CONTINUE SHOPPING FOR MORE PRODUCTS</p>
+                <a href="products.html" class="btn btn-primary" id="browse">Browse Products</a>
+            </div>
+    </div>
+    <!-- </div> -->
     <div class="shopping-cart">
             <!-- Title -->
             <div class="title">
-              Shopping Cart
+                Shopping Cart
             </div>
-           
-            <!-- Product #1 -->
-            <div class="item">
-              <div class="buttons">
-                  <span class="delete-btn"><img src="./pictures/x-mark.png" alt="" /></span>
-                <!--<span class="like-btn"></span>-->
-              </div>
-           
-              <div class="image">
-                <img src="./pictures/cucumber.png" alt style="max-width: 45%;"> 
-              </div>
-           
-              <div class="description">
-                <span>Product Name</span>
-                <!----<span>Bball High</span>
-                <span>White</span>-->
-              </div>
-           
-              <div class="quantity">
-                <button class="plus-btn" type="button" name="button">
-                  <img src="./pictures/plus.png" alt="" />
-                </button>
-                <input type="text" name="name" value="1">
-                <button class="minus-btn" type="button" name="button">
-                  <img src="./pictures/minus.png" alt="" />
-                </button>
-              </div>
-           
-              <div class="total-price"><span>Total:</span> $50</div>
-            </div>
-           
-            <!-- Product #2 -->
-            <div class="item">
-              <div class="buttons">
-                  <span class="delete-btn"><img src="./pictures/x-mark.png" alt="" /></span>
-                <!--<span class="like-btn"></span>-->
-              </div>
-           
-              <div class="image">
-                    <img src="./pictures/cucumber.png" alt style="max-width: 45%;"> 
-              </div>
-           
-              <div class="description">
-                <span>Product Name</span>
-                <!----<span>Future Sneakers</span>
-                <span>White</span>-->
-              </div>
-           
-              <div class="quantity">
-                <button class="plus-btn" type="button" name="button">
-                  <img src="./pictures/plus.png" alt="" />
-                </button>
-                <input type="text" name="name" value="1">
-                <button class="minus-btn" type="button" name="button">
-                  <img src="./pictures/minus.png" alt="" />
-                </button>
-              </div>
-           
-              <div class="total-price"><span>Total:</span> $50</div>
-            </div>
-           
-            <!-- Product #3 -->
-            <div class="item">
-              <div class="buttons">
-                <span class="delete-btn"><img src="./pictures/x-mark.png" alt="" /></span>
-                <!--<span class="like-btn"></span>-->
-              </div>
-           
-              <div class="image">
-                    <img src="./pictures/cucumber.png" alt style="max-width: 45%;"> 
-              </div>
-           
-              <div class="description">
-                <span>Product Name</span>
-                <!----<span>Brushed Scarf</span>
-                <span>Brown</span>-->
-              </div>
-           
-              <div class="quantity">
-                <button class="plus-btn" type="button" name="button">
-                  <img src="./pictures/plus.png" alt="" />
-                </button>
-                <input type="text" name="name" value="1">
-                <button class="minus-btn" type="button" name="button">
-                  <img src="./pictures/minus.png" alt="" />
-                </button>
-              </div>
-           
-              <div class="total-price"><span>Total:</span> $50</div>
-              
-            </div>
-            <br>
-            <div class="grand-totaltopic">
-                <span>Grand Total:</span>
-            <div class="grand-total">$120</div>
-          </div>
-
-
+        </div>
+        </div>
     <!------>
-    <script>
-        function myFunction() {
-            var x = document.getElementById("myTopnav");
-            if (x.className === "topnav") {
-                x.className += " responsive";
-            } else {
-                x.className = "topnav";
+    
+        <!------>
+        <script>
+            function myFunction() {
+                var x = document.getElementById("myTopnav");
+                if (x.className === "topnav") {
+                    x.className += " responsive";
+                } else {
+                    x.className = "topnav";
+                }
             }
-        }
-    </script>
+        </script>
 
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
         crossorigin="anonymous"></script>
@@ -154,7 +69,8 @@
         crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
         crossorigin="anonymous"></script>
-    <script src="viewcart.js"></script>
+        <script src="viewcartnew.js"></script>
 </body>
 
 </html>
+

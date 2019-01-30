@@ -15,8 +15,6 @@ module.exports = function(app) {
     db.products.findAll({
       }).then(function(products) {
       res.json(products);
-      // console.log(products);
-
     }).catch(function(error) {
       res.json({ error: error });
     });
