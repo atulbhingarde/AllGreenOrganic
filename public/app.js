@@ -27,29 +27,29 @@ renderCustomers();
 
 
 
-const renderProducts = function(){
-  $.get('/api/products').then(function(listProducts){
-      MyDebug && console.log('List of Products');
-      MyDebug && console.log(listProducts);
+// const renderProducts = function(){
+//   $.get('/api/products').then(function(listProducts){
+//       MyDebug && console.log('List of Products');
+//       MyDebug && console.log(listProducts);
 
 
-    $(document).ready(function() {
-      $('#reNameMe2').DataTable( {
+//     $(document).ready(function() {
+//       $('#reNameMe2').DataTable( {
 
-        data: listProducts,    
-          columns: [
-              { data: "market_id" },
-              { data: "product_name" },
-              { data: "price" },
-              { unit: "unit"}
-          ]
-      } );
-    });
+//         data: listProducts,    
+//           columns: [
+//               { data: "market_id" },
+//               { data: "product_name" },
+//               { data: "price" },
+//               { unit: "unit"}
+//           ]
+//       } );
+//     });
 
-})
-}
+// })
+// }
 
-renderProducts();
+// renderProducts();
 
 
 
@@ -318,28 +318,28 @@ let placesToDump = [];
 
 
 
-$(document).ready(function () {
-    $('#mainTitle').textillate({ in: { effect: 'rollIn' } });
-    $(".form-check-input").on("click", function () {
-        $(this).attr("isSelected", "true");
-        $('#rest-info').empty();
-        toSearchFor = "";
-        toSearchFor = $(this).attr("data-text");
+// $(document).ready(function () {
+//     $('#mainTitle').textillate({ in: { effect: 'rollIn' } });
+//     $(".form-check-input").on("click", function () {
+//         $(this).attr("isSelected", "true");
+//         $('#rest-info').empty();
+//         toSearchFor = "";
+//         toSearchFor = $(this).attr("data-text");
 
-        isFormComplete = true;
-        restuarantIDs = [];
+//         isFormComplete = true;
+//         restuarantIDs = [];
 
-        if (!btnDisabled) {
-            disableBoxes(this);
+//         if (!btnDisabled) {
+//             disableBoxes(this);
 
-        } else if (btnDisabled) {
-            releaseBoxes(this);
+//         } else if (btnDisabled) {
+//             releaseBoxes(this);
 
-        }
+//         }
 
 
-    });
-});
+//     });
+// });
 //gets the address the user inputs
 const getAddress = () => {
   let street = $("#address").val().trim();
