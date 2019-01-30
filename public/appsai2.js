@@ -2,9 +2,10 @@ let cart = [];
 //this is the function to render all items in a database.
 const renderItems = function(items) {
 
+  // console.log(item);
   items.forEach(function(item) {
     let newProduct = $(` <tr>
-          <td class="image">${item.image}</td>
+          <td class="image"><img src="${item.prd_image}" width="20%" height="20%"></td>
           <td class="id">${item.id}</td>
           <td class="product_name">${item.product_name}</td>
           <td class="price">${item.price}</td>
@@ -20,19 +21,27 @@ const clearInput = function() {
   $("[id =input]").val("");
 };
 
-const validate = function(item) {
+const saveToLocalData = item => {
+  const productInfo = JSON.stringify(item);
 //   if (item.incart.padStart(4,0) > item.instock.padStart(4,0)) {
-    if ( item.incart.padStart(4,0) >  0 ) {
-    console.log(item.incart);
-    $(".alert").removeClass("hide");
-    clearInput();
-  } else if (isNaN(item.incart)){
-    $(".alert").removeClass("hide");
-    clearInput();
+  localStorage.setItem('cart', productInfo);
+  return;
+};
+
+const validate = item => {
+  const localData = JSON.parse(localStorage.getItem('cart'));
+  if (!localData|| localData.length === 0) { 
+    const productInfo = JSON.stringify([item]);
+    localStorage.setItem('cart', productInfo);
+  } else if (localData.length >= 1) {
+    for (let i = 0; i < localData.length; i++) {
+      if (localData[i].id === item.id) {
+        localData[i] = item;
+        return saveToLocalData(localData);
   }
-  else {
-    cart.push(item);
-    clearInput();
+    }
+    localData.push(item);
+    return saveToLocalData(localData);
   }
 };
 
@@ -50,6 +59,10 @@ $(document).ready(() => {
   $(".table-body").on("click", ".btn", function() {
     $(".alert").addClass("hide");
     const item = {
+      prd_image: $(this)
+        .parents("tr")
+        .find(".prd_image")
+        .text(),
       id: $(this)
         .parents("tr")
         .find(".id")
@@ -108,7 +121,7 @@ console.log("btncart");
       totalcost += (parseFloat(cart[i].price)*parseFloat(cart[i].incart.padStart(3,0)))
       console.log(cart[i]);
       $(".tbodymodal").append(`<tr>
-    <td class="cartid">${cart[i].id}</td>
+          <td class="cartid">${cart[i].id}</td>
           <td class="cart-product_name">${cart[i].name}</td>
           <td class="cart-product_name">${cart[i].department}</td>
           <td class="cart-price">$${cart[i].price}</td>

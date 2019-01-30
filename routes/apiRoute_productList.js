@@ -12,7 +12,7 @@ module.exports = function(app) {
       }).then(function(products) {
       res.json(products);
       console.log(products);
-
+      // alert(products[0]);
     }).catch(function(error) {
       res.json({ error: error });
     });

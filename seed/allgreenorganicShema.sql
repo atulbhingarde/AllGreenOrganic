@@ -1,3 +1,5 @@
+DROP DATABASE IF EXISTS allgreenorganic;
+
 CREATE DATABASE allgreenorganic;
 
 USE allgreenorganic;
@@ -26,6 +28,7 @@ PRIMARY KEY(id)
 
 CREATE TABLE products(
 id INTEGER AUTO_INCREMENT NOT NULL,
+prd_image VARCHAR(100) NOT NULL,
 product_name VARCHAR(100) NOT NULL,
 market_id INTEGER NOT NULL,
 price DECIMAL(4,2) NOT NULL,

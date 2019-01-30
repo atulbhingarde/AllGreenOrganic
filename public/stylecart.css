@@ -28,18 +28,14 @@
     padding: 20px 30px;
     color: #5E6977;
     font-size: 18px;
-    font-weight: 400;
+    font-weight: 400
   }
    
   .item {
     padding: 20px 30px;
     height: 120px;
-    display: flex;
-  }
+    display: flex
    
-  .item:nth-child(3) {
-    border-top:  1px solid #E1E8EE;
-    border-bottom:  1px solid #E1E8EE;
   }
   .buttons {
     position: relative;
@@ -249,4 +245,8 @@
 .title {
   color:  black;
   font-size:  150%
+}
+#browse {
+  background-color: red;
+  border-color: red
 }
