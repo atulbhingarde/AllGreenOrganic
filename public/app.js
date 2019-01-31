@@ -33,18 +33,18 @@ const renderProducts = function(){
       MyDebug && console.log(listProducts);
 
 
-    $(document).ready(function() {
-      $('#reNameMe2').DataTable( {
-
-        data: listProducts,    
-          columns: [
-              { data: "market_id" },
-              { data: "product_name" },
-              { data: "price" },
-              { unit: "unit"}
-          ]
-      } );
-    });
+  //  $(document).ready(function() {
+  //    $('#reNameMe2').DataTable( {
+  // 
+  //      data: listProducts,    
+  //        columns: [
+  //            { data: "market_id" },
+  //            { data: "product_name" },
+  //            { data: "price" },
+  //            { unit: "unit"}
+  //        ]
+  //    } );
+  //  });
 
 })
 }
