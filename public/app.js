@@ -496,6 +496,24 @@ const renderMarks = (map, idArr) => {
 
               }
 
+///////////////////////////////////////////////////////////////////////////////////////
+              function calcRoute() {
+                console.log("calcRoute");
+                start = directionsLatLng;
+                end = "50 Rue Ste-Catherine O Montréal, QC H2X 1Z6";
+                var request = {
+                  origin:start,
+                  destination:end,
+                  travelMode: google.maps.TravelMode.TRANSIT
+                };
+                directionsService.route(request, function(result, status) {
+                  if (status == google.maps.DirectionsStatus.OK) {
+                    directionsDisplay.setDirections(result);
+                  }
+                });
+              }
+//////////////////////////////////////////////////////////////
+
               //Function to check to retrieve opening hours for the day the applicaiton is running
               function checkHours() {
                   let isOpen = place.opening_hours.open_now;
