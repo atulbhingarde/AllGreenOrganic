@@ -61,10 +61,15 @@ VALUES("/public/pictures/products/cabbage.jpg","cabbage",5,3.00,"each");
 
 INSERT INTO products(prd_image,product_name,market_id,price,unit)
 VALUES("/public/pictures/products/strawberry.jpg","strawberry",1,3.50,"pint");
+<<<<<<< HEAD
 
 INSERT INTO products(prd_image,product_name,market_id,price,unit)
 VALUES("/public/pictures/products/blueberry.jpg","blueberry",4,5.00,"pint");
+=======
+>>>>>>> 02f67a92d8e19c2d0a55d2aec36dc8c9be4031c3
 
+INSERT INTO products(prd_image,product_name,market_id,price,unit)
+VALUES("/public/pictures/products/blueberry.jpg","blueberry",4,5.00,"pint");
 
 
 

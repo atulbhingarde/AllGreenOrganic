@@ -5,7 +5,7 @@ const renderItems = (items) => {
   // console.log(item);
   items.forEach(function(item) {
     let newProduct = $(` <tr>
-          <td class="image"><img src="${item.prd_image}" width="20%" height="20%"></td>
+          <td class="image"><img src="${item.prd_image}" width="40%" height="30%"></td>
           <td class="id">${item.id}</td>
           <td class="product_name">${item.product_name}</td>
           <td class="price">${item.price}</td>
