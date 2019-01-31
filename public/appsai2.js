@@ -10,7 +10,7 @@ const renderItems = function(items) {
           <td class="product_name">${item.product_name}</td>
           <td class="price">${item.price}</td>
           <td class="stock_quantity">${item.unit}</td>
-          <td class="quantity"><input class="buy1" id="input"></td>
+          <td class="quantity"><input class="buy1" id="input" type="number"></td>
           <td><button type="button" class="btn btn-info">Add to Cart</button><td>
         </tr>`);
     $(".tbodypage").append(newProduct);
