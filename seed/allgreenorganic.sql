@@ -77,4 +77,3 @@ VALUES("/public/pictures/products/blueberry.jpg","blueberry",4,5.00,"pint");
 
 
 
-
