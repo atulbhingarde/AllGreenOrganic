@@ -1,6 +1,6 @@
 let cart = [];
 //this is the function to render all items in a database.
-const renderItems = function(items) {
+const renderItems = (items) => {
 
   // console.log(item);
   items.forEach(function(item) {
@@ -10,14 +10,14 @@ const renderItems = function(items) {
           <td class="product_name">${item.product_name}</td>
           <td class="price">${item.price}</td>
           <td class="stock_quantity">${item.unit}</td>
-          <td class="quantity"><input class="buy1" id="input"></td>
+          <td class="quantity"><input class="buy1" id="input" type="number"></td>
           <td><button type="button" class="btn btn-info">Add to Cart</button><td>
         </tr>`);
     $(".tbodypage").append(newProduct);
   });
 };
 
-const clearInput = function() {
+const clearInput = () => {
   $("[id =input]").val("");
 };
 
@@ -27,6 +27,7 @@ const saveToLocalData = item => {
   localStorage.setItem('cart', productInfo);
   return;
 };
+
 
 const validate = item => {
   const localData = JSON.parse(localStorage.getItem('cart'));

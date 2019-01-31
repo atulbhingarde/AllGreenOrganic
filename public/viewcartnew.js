@@ -5,8 +5,10 @@ $(document).ready(function() {
       const customerCart = JSON.parse(localStorage.getItem(`cart`));
       let total = 0;
       customerCart.forEach((item, itemIndex) => {
-        total += parseFloat(item.price).toFixed(2) * parseFloat(item.incart).toFixed(2);
-        //total += parseFloat(item.price) * parseFloat(item.incart);
+        let itemTotal = item.price * item.incart;
+        total += parseFloat(item.price) * parseFloat(item.incart);
+        console.log(total.toFixed(2));
+        // total += parseFloat(item.price) * parseFloat(item.incart);
         $(`.shopping-cart`).append(`<div class="item">
       <div class="buttons">
       <img id="delete-btn" src="./pictures/x-mark.png" alt="delete" data-index=${itemIndex}>
@@ -32,15 +34,14 @@ $(document).ready(function() {
         </button>
       </div>
    
-      <div class="total-price"><span>Total:</span> $${item.price *
-        item.incart}</div>
+      <div class="total-price"><span>Total:</span> $${itemTotal.toFixed(2)}</div>
     </div>`);
       });
   
       $(`.shopping-cart`).append(`<br>
     <div class="grand-totaltopic">
         <span>Grand Total:</span>
-    <div class="grand-total">$ ${total}</div>
+    <div class="grand-total">$ ${total.toFixed(2)}</div>
     `);
     }
   
