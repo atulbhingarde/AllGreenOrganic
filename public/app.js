@@ -496,7 +496,7 @@ const renderMarks = (map, idArr) => {
 
               }
 
-///////////////////////////////////////////////////////////////////////////////////////
+/*///////////////////////////////////////////////////////////////////////////////////////
               function calcRoute() {
                 console.log("calcRoute");
                 start = directionsLatLng;
@@ -513,7 +513,7 @@ const renderMarks = (map, idArr) => {
                 });
               }
 //////////////////////////////////////////////////////////////
-
+*/
               //Function to check to retrieve opening hours for the day the applicaiton is running
               function checkHours() {
                   let isOpen = place.opening_hours.open_now;
