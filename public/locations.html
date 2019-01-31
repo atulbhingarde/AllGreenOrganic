@@ -43,30 +43,52 @@
     </nav>
     <br>
     
-    <div class="container px-lg-5">
+
+
         <div class="row mx-lg-n5">
             <!--you can use id=locationmap for your map landing-->
-            <div class="col py-3 px-lg-5 border bg-light"id="locationmap"></div>
+           <!-- <div id="fade-test" class="col-sm-6"> -->
+               
+           <div style="height:450px; width: 450px;"  id="geo-map" class="col-sm-6">
+    
+            </div>
+            <div id="fade-test" class="col-sm-6">
+               
+                        <div class="form-group">
+                        <label for="house">Street Address</label>
+                        <input type="text" class="form-control" id="address" placeholder="Enter Address">
+                    </div>
+                    <div class="form-group">
+                        <label for="city">City</label>
+                        <input type="text" class="form-control" id="city" placeholder="Enter City">
+                    </div>
+                    <div class="form-group">
+                        <label for="zipcode">State</label>
+                        <input type="text" class="form-control" id="state" placeholder="Enter State">
+                    </div>
+                    <div class="form-group">
+                        <label for="city">Zipcode</label>
+                        <input type="text" class="form-control" id="zipcode" placeholder="Enter Zipcode">  
+                    </div>
+                    <button  class="btn btn-primary" id="submit-geo">Submit</button>
+
+            </div>
+
+        </div>
+           
           <!----<div class="col py-3 px-lg-5 border bg-light"id="locationmap"><img src="pictures/alpharetta.png"></div>-->
           <!--you can use this id=address as physical addresses landing-->
           <div class="col py-3 px-lg-5 border bg-light" id="address">777 Old Milton Road Alpharetta, GA 3005<br>
             456 Windward Parkway Alpharetta, GA 3005<br>
             111 Spring Street Alpharetta, GA 3005<br></div>
-        </div>
-      </div>
+        
+      <!---</div> -->
     
         
 
-        <script>
-            function myFunction() {
-                var x = document.getElementById("myTopnav");
-                if (x.className === "topnav") {
-                    x.className += " responsive";
-                } else {
-                    x.className = "topnav";
-                }
-            }
-        </script>
+      
+           <!--API Call  -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBtDXqrmP1A6NzPFxzjveh5ICYCFywHeKU&libraries=places"></script>
 
         <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
             crossorigin="anonymous"></script>
@@ -76,7 +98,8 @@
             crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
             crossorigin="anonymous"></script>
-        <script src="app.js"></script>
+        <script src="./app.js"></script>
 </body>
 
 </html>
+
