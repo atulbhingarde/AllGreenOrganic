@@ -70,7 +70,24 @@ body {
     display: block;
     text-align: left;
   }
-}
+  table, thead, tobody, th, td, tr {
+    display: block;
+    border-color: #ddd
+  }
+  thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+  tr { border: 1px solid #ccc;}
+  td {
+    border: none;
+    border-bottom: 1pm solid #eee;
+    position: relative;
+    padding-left: 50%;
+  }
+  }
+
  @media screen and (min-width: 320px) and (max-width: 568px) {
   #container  {
     position: absolute;
@@ -207,6 +224,8 @@ body {
     height: auto;
 }
 .table  {
+  margin-left: auto;
+  margin-right: auto;
   border-collapse: collapse;
   border-spacing: 0;
   width: 100%;
@@ -214,9 +233,9 @@ body {
 }
 
 .th, td {
-  text-align: left;
+  text-align: center;
   padding: 8px;
-  
+  background-color: rgb(246, 247, 244)
 }
 
 
@@ -240,3 +259,20 @@ tr:nth-child(even){background-color: #f2f2f2}
   margin-right:auto;
   width: 15%
   }
+#input {
+  padding:  1px;
+  max-width: 32px;
+  box-align: center;
+}
+.btn.btn-info {
+font-size: x-small;
+background-color: lightgray;
+color:black
+
+}
+.table .thead-dark th {
+    margin-left: auto;
+    margin-right: auto;
+    color:  black;
+    border-color: white
+}
