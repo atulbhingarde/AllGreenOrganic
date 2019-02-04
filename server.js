@@ -14,7 +14,7 @@ const path = require("path");
 // Sets up the Express App
 // =============================================================
 const app = express();
-const PORT = process.env.PORT || 8100;
+const PORT = process.env.PORT || 3000;
 
 // Requiring our models for syncing
 const db = require('./models');

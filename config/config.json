@@ -1,7 +1,8 @@
 {
   "development": {
     "username": "root",
-    "password": "Redrose123!!",
+    "password": "Jun1p3r",
+
     "database": "allgreenorganic",
     "host": "127.0.0.1",
     "port": 3306,

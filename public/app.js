@@ -27,6 +27,7 @@ renderCustomers();
 
 
 
+
 const renderProducts = function(){
   $.get('/api/products').then(function(listProducts){
       MyDebug && console.log('List of Products');
@@ -49,7 +50,8 @@ const renderProducts = function(){
 })
 }
 
-renderProducts();
+
+// renderProducts();
 
 
 
@@ -355,9 +357,11 @@ console.log("javascript is hooked up")
 $('#submit-geo').on('click', function (event) {
   //if the user has given an address and chosen what they want to search for
   event.preventDefault();
+
   // alert("working")
 
 //  console.log("in submit go")
+
       getAddress();
 
       //sets the address
@@ -391,7 +395,9 @@ const initMap = (coords) => {
   map = new google.maps.Map(document.getElementById('geo-map'), {
       center: coords,
       //controls how 'zoomed' the map will start
+
       zoom: 8
+
   });
   //recieve locations at a 10 mile radius from the user's coordinates
   getRestPlaces(coords);
@@ -497,6 +503,8 @@ const renderMarks = (map, idArr) => {
               }
 
 /*///////////////////////////////////////////////////////////////////////////////////////
+=======
+
               function calcRoute() {
                 console.log("calcRoute");
                 start = directionsLatLng;
@@ -513,6 +521,7 @@ const renderMarks = (map, idArr) => {
                 });
               }
 //////////////////////////////////////////////////////////////
+
 */
               //Function to check to retrieve opening hours for the day the applicaiton is running
               function checkHours() {
@@ -573,3 +582,4 @@ const renderMarks = (map, idArr) => {
 const getTravelUrl = (origin, destination) => {
   return `<a href="https://www.google.com/maps/dir/?api=1&origin=${origin}&destination=${destination}&travelmode=driving" target="_blank">${destination}</a>`;
 }
+
