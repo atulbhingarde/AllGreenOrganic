@@ -27,27 +27,29 @@ renderCustomers();
 
 
 
-// const renderProducts = function(){
-//   $.get('/api/products').then(function(listProducts){
-//       MyDebug && console.log('List of Products');
-//       MyDebug && console.log(listProducts);
+
+const renderProducts = function(){
+  $.get('/api/products').then(function(listProducts){
+      MyDebug && console.log('List of Products');
+      MyDebug && console.log(listProducts);
 
 
-//     $(document).ready(function() {
-//       $('#reNameMe2').DataTable( {
+  //  $(document).ready(function() {
+  //    $('#reNameMe2').DataTable( {
+  // 
+  //      data: listProducts,    
+  //        columns: [
+  //            { data: "market_id" },
+  //            { data: "product_name" },
+  //            { data: "price" },
+  //            { unit: "unit"}
+  //        ]
+  //    } );
+  //  });
 
-//         data: listProducts,    
-//           columns: [
-//               { data: "market_id" },
-//               { data: "product_name" },
-//               { data: "price" },
-//               { unit: "unit"}
-//           ]
-//       } );
-//     });
+})
+}
 
-// })
-// }
 
 // renderProducts();
 
@@ -355,9 +357,11 @@ console.log("javascript is hooked up")
 $('#submit-geo').on('click', function (event) {
   //if the user has given an address and chosen what they want to search for
   event.preventDefault();
-  alert("working")
 
- console.log("in submit go")
+  // alert("working")
+
+//  console.log("in submit go")
+
       getAddress();
 
       //sets the address
@@ -391,7 +395,9 @@ const initMap = (coords) => {
   map = new google.maps.Map(document.getElementById('geo-map'), {
       center: coords,
       //controls how 'zoomed' the map will start
-      zoom: 11
+
+      zoom: 8
+
   });
   //recieve locations at a 10 mile radius from the user's coordinates
   getRestPlaces(coords);
@@ -496,7 +502,9 @@ const renderMarks = (map, idArr) => {
 
               }
 
-///////////////////////////////////////////////////////////////////////////////////////
+/*///////////////////////////////////////////////////////////////////////////////////////
+=======
+
               function calcRoute() {
                 console.log("calcRoute");
                 start = directionsLatLng;
@@ -514,6 +522,7 @@ const renderMarks = (map, idArr) => {
               }
 //////////////////////////////////////////////////////////////
 
+*/
               //Function to check to retrieve opening hours for the day the applicaiton is running
               function checkHours() {
                   let isOpen = place.opening_hours.open_now;

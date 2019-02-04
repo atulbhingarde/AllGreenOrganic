@@ -1,11 +1,11 @@
 let cart = [];
 //this is the function to render all items in a database.
-const renderItems = function(items) {
+const renderItems = (items) => {
 
   // console.log(item);
   items.forEach(function(item) {
     let newProduct = $(` <tr>
-          <td class="image"><img src="${item.prd_image}" width="20%" height="20%"></td>
+          <td class="image"><img src="${item.prd_image}" width="40%" height="30%"></td>
           <td class="id">${item.id}</td>
           <td class="product_name">${item.product_name}</td>
           <td class="price">${item.price}</td>
@@ -17,7 +17,7 @@ const renderItems = function(items) {
   });
 };
 
-const clearInput = function() {
+const clearInput = () => {
   $("[id =input]").val("");
 };
 
@@ -27,6 +27,7 @@ const saveToLocalData = item => {
   localStorage.setItem('cart', productInfo);
   return;
 };
+
 
 const validate = item => {
   const localData = JSON.parse(localStorage.getItem('cart'));

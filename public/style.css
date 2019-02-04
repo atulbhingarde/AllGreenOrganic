@@ -217,10 +217,10 @@ body {
   }
 }
 .nav-link {
-  margin-left: 180px
+  margin-left: 150px
 }
   #imageproduct {
-    max-width: 25%;
+    max-width: 45%;
     height: auto;
 }
 .table  {
@@ -261,7 +261,7 @@ tr:nth-child(even){background-color: #f2f2f2}
   }
 #input {
   padding:  1px;
-  max-width: 32px;
+  max-width: 55px;
   box-align: center;
 }
 .btn.btn-info {
@@ -275,4 +275,19 @@ color:black
     margin-right: auto;
     color:  black;
     border-color: white
+}
+#organic {
+  max-width: 5%
+}
+#geo-map {
+  width:  75%
+}
+#address, #city, #zipcode, #state {
+  width: 50%
+}
+#form-group {
+  margin-left:75%
+}
+#col-sm-6 {
+  width:75%
 }
